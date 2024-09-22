@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Sueldo Neto</title>
+  </head>
+  <body>
+    <h1>Calculadora de Sueldo Neto</h1>
+    <form action="calcular_sueldo.php" method="post">
+      <label for="salario_bruto">Salario Bruto Anual:</label>
+      <input type="number" name="salario_bruto" id="salario_bruto" required />
+      <br /><br />
+      <label for="situacion_familiar">Salario Bruto Anual:</label>
+      <select name="situacion_familiar" id="situacion_familiar" required>
+        <option value="soltero">Soltero</option>
+        <option value="casado_sin_hijos">Casado sin hijos</option>
+        <option value="casado_con_hijos">Casado con hijos</option>
+        <option value="monoparental">Monoparental</option>
+      </select>
+      <br /><br />
+      <label for="numero_hijos">Número de hijos: </label>
+      <input
+        type="number"
+        name="numero_hijos"
+        id="numero_hijos"
+        min="0"
+        value="0"
+        required
+      />
+      <br /><br />
+      <label for="discapacidad">¿Tiene discapacidad?: </label>
+      <select name="discapacidad" id="discapacidad" required>
+        <option value="sin_discapacidad">Sin discapacidad</option>
+        <option value="33">Grado igual o superior al 33%</option>
+        <option value="65">Grado igual o superior al 65%</option>
+      </select>
+      <br /><br />
+      <label for="tipo_contrato">Tipo de Contrato Laboral: </label>
+      <select name="tipo_contrato" id="tipo_contrato" required>
+        <option value="indefinido">Indefinido</option>
+        <option value="temporal">Temporal</option>
+      </select>
+      <br /><br />
+      <label for="numero_pagas">Número de Pagas: </label>
+      <select name="numero_pagas" id="numero_pagas" required>
+        <option value="12">12 pagas</option>
+        <option value="14">14 pagas</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Calcular Sueldo Neto" />
+    </form>
+  </body>
+</html>
